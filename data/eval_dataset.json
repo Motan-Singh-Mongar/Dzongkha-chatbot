@@ -1,0 +1,14 @@
+{
+  "_readme": "Evaluation set for a fluent Dzongkha speaker. Fill 'reference_dzongkha', run scripts/evaluate_model.py, then score each reply 1-5 for Accuracy, Fluency, Appropriateness.",
+  "criteria": ["Reply is Dzongkha script (not English, not Tibetan/Nepali)", "Meaning matches the question", "Grammar and word choice are natural", "Polite register where appropriate", "Follow-ups use earlier context"],
+  "cases": [
+    {"id": 1, "category": "greeting", "history": [], "question": "Hello, how are you?", "reference_dzongkha": ""},
+    {"id": 2, "category": "general_knowledge", "history": [], "question": "What is artificial intelligence?", "reference_dzongkha": ""},
+    {"id": 3, "category": "advice", "history": [], "question": "How can I learn Python?", "reference_dzongkha": ""},
+    {"id": 4, "category": "thanks", "history": [], "question": "Thank you for your help.", "reference_dzongkha": ""},
+    {"id": 5, "category": "general_knowledge", "history": [], "question": "What is the capital of Bhutan?", "reference_dzongkha": ""},
+    {"id": 6, "category": "follow_up", "history": [{"role": "user", "content": "What is machine learning?"}, {"role": "assistant", "content": "Machine learning is a way for computers to learn from examples."}], "question": "Give me an example.", "reference_dzongkha": ""},
+    {"id": 7, "category": "unclear", "history": [], "question": "asdf qwerty", "reference_dzongkha": ""},
+    {"id": 8, "category": "unsupported", "history": [], "question": "What will the weather be in Thimphu tomorrow?", "reference_dzongkha": ""}
+  ]
+}

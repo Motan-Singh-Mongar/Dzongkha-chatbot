@@ -1,0 +1,9 @@
+# Install PyTorch (CPU) first on Windows - see README.md Step 3:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+flask>=3.0
+transformers>=4.44
+sentencepiece>=0.2
+huggingface_hub>=0.24
+safetensors>=0.4
+numpy
+pytest>=8.0

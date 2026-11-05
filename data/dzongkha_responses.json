@@ -1,0 +1,40 @@
+{
+  "_readme": "RULE-BASED predefined responses (not AI). Set 'dzongkha' to null to let the local translation model translate 'english'. Fill 'dzongkha' only with text a fluent speaker has checked, then set status to 'reviewed'. Every Dzongkha string shipped here is a DRAFT.",
+  "intents": {
+    "how_are_you": {
+      "match": "anywhere",
+      "patterns": ["how are you", "how are you doing", "how r you", "how do you do"],
+      "responses": [
+        {"english": "Hello! I am fine, thank you. How are you?", "dzongkha": null, "status": "unreviewed"}
+      ]
+    },
+    "thanks": {
+      "match": "anywhere",
+      "patterns": ["thank you", "thanks", "thank you so much", "thanks a lot"],
+      "responses": [
+        {"english": "You are welcome. I am happy to help.", "dzongkha": null, "status": "unreviewed"}
+      ]
+    },
+    "goodbye": {
+      "match": "anywhere",
+      "patterns": ["bye", "goodbye", "see you later", "see you"],
+      "responses": [
+        {"english": "Goodbye. Have a good day.", "dzongkha": null, "status": "unreviewed"}
+      ]
+    },
+    "greeting": {
+      "match": "start",
+      "patterns": ["hello", "hi", "hey", "good morning", "good afternoon", "good evening", "kuzuzangpo", "kuzuzangpo la"],
+      "responses": [
+        {"english": "Hello.", "dzongkha": "ཀུ་ཟུ་ཟང་པོ་ལགས།", "status": "unreviewed"}
+      ]
+    },
+    "who_are_you": {
+      "match": "anywhere",
+      "patterns": ["who are you", "what is your name", "what are you"],
+      "responses": [
+        {"english": "I am a chatbot that runs on your computer. I answer in Dzongkha, but my Dzongkha may contain mistakes.", "dzongkha": null, "status": "unreviewed"}
+      ]
+    }
+  }
+}

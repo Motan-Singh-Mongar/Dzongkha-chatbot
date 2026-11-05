@@ -1,0 +1,74 @@
+:root {
+  --bg: #f4f6fb; --card: #ffffff; --text: #1d2433; --muted: #5d6679;
+  --primary: #b3261e; --primary-text: #ffffff; --user: #1f3a8a; --user-text: #ffffff;
+  --bot: #ffffff; --border: #dfe3ec; --warn-bg: #fff4d6; --warn-text: #6b4b00;
+  --info-bg: #e5f0ff; --info-text: #123a73; --err-bg: #fde7e7; --err-text: #8a1c1c;
+  --dz-font: "Jomolhari", "Noto Serif Tibetan", "Noto Sans Tibetan", "Microsoft Himalaya", "Kailasa", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12151c; --card: #1b2030; --text: #e8ebf3; --muted: #9aa3b8;
+    --user: #3b5bdb; --bot: #232a3d; --border: #2f3750;
+    --warn-bg: #3a3012; --warn-text: #f3dd9a; --info-bg: #14304f; --info-text: #b8d8ff;
+    --err-bg: #4a1d1d; --err-text: #ffc9c9;
+  }
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { background: var(--bg); color: var(--text); font-family: system-ui, "Segoe UI", Roboto, sans-serif; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.dz { font-family: var(--dz-font); line-height: 1.9; }
+
+.app { max-width: 860px; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
+       padding: 12px; gap: 10px; }
+.header { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+h1 { margin: 0; font-size: 1.5rem; }
+.subtitle { margin: 2px 0 0; color: var(--muted); font-size: .9rem; }
+.logo {
+  height: 48px;
+  width: auto;
+  margin-right: 12px;
+}
+
+.banner { padding: 8px 12px; border-radius: 10px; font-size: .85rem; }
+.banner-info { background: var(--info-bg); color: var(--info-text); }
+
+.chat { flex: 1; overflow-y: auto; background: var(--card); border: 1px solid var(--border);
+        border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 12px;background-image: url('C:/Users/Ideapad Gaming/OneDrive/Desktop/MLA308 NLP, Generative AI and GUI/individual_assignment/english-dzongkha-ai-chatbot/english-dzongkha-ai-chatbot/chat_background.jpg'); background-size: cover; background-position: center; }
+.msg { display: flex; flex-direction: column; max-width: 85%; }
+.msg.user { align-self: flex-end; align-items: flex-end; }
+.msg.bot { align-self: flex-start; }
+.bubble { padding: 10px 14px; border-radius: 16px; overflow-wrap: anywhere; white-space: pre-wrap; }
+.user .bubble { background: var(--user); color: var(--user-text); border-bottom-right-radius: 4px; }
+.bot .bubble { background: var(--bot); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+.bubble .dz { font-size: 1.2rem; margin: 0; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 6px; font-size: .75rem; color: var(--muted); }
+.badge { border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px; }
+.link-btn { background: none; border: none; color: var(--primary); cursor: pointer; padding: 0; font: inherit; text-decoration: underline; }
+@media (prefers-color-scheme: dark) { .link-btn { color: #ff8a80; } }
+.english { margin-top: 6px; font-size: .85rem; color: var(--muted); }
+
+.typing { display: inline-flex; gap: 5px; padding: 14px; }
+.typing span { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); animation: bounce 1.2s infinite; }
+.typing span:nth-child(2) { animation-delay: .15s; } .typing span:nth-child(3) { animation-delay: .3s; }
+@keyframes bounce { 0%, 60%, 100% { transform: translateY(0); opacity: .4; } 30% { transform: translateY(-6px); opacity: 1; } }
+
+.examples { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.examples-label { color: var(--muted); font-size: .85rem; }
+.chip { background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 999px;
+        padding: 5px 12px; font-size: .85rem; cursor: pointer; }
+.chip:hover:not(:disabled) { border-color: var(--primary); }
+
+.error { background: var(--err-bg); color: var(--err-text); padding: 8px 12px; border-radius: 10px; font-size: .9rem; }
+.composer { display: flex; gap: 8px; }
+textarea { flex: 1; resize: none; padding: 12px; border-radius: 12px; border: 1px solid var(--border);
+           background: var(--card); color: var(--text); font: inherit; max-height: 120px; }
+.btn { border: none; border-radius: 12px; padding: 0 18px; font: inherit; cursor: pointer; min-height: 44px; }
+.btn-primary { background: var(--primary); color: var(--primary-text); font-weight: 600; }
+.btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--text); padding: 0 14px; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+:focus-visible { outline: 3px solid #4c8dff; outline-offset: 2px; }
+
+@media (max-width: 560px) {
+  h1 { font-size: 1.2rem; } .msg { max-width: 94%; } .app { padding: 8px; }
+}

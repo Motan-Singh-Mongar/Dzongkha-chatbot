@@ -1,0 +1,40 @@
+{
+  "_readme": "Small local knowledge base. 'english' text is simple factual content. 'keywords' are full question phrases. Leave 'dzongkha' null to machine-translate, or paste reviewed Dzongkha and set status to 'reviewed'.",
+  "entries": [
+    {
+      "id": "what_is_ai",
+      "keywords": ["what is artificial intelligence", "what's artificial intelligence", "what is ai", "explain artificial intelligence", "explain ai", "define artificial intelligence"],
+      "english": "Artificial intelligence is when computers do tasks that usually need human thinking, such as understanding language or recognizing pictures.",
+      "dzongkha": null,
+      "status": "unreviewed"
+    },
+    {
+      "id": "what_is_ml",
+      "keywords": ["what is machine learning", "explain machine learning", "define machine learning"],
+      "english": "Machine learning is a way for computers to learn from examples and data instead of following exact rules. For example, a program can learn to find spam email after seeing many spam and normal emails.",
+      "dzongkha": null,
+      "status": "unreviewed"
+    },
+    {
+      "id": "learn_python",
+      "keywords": ["how can i learn python", "how do i learn python", "how to learn python", "learn python"],
+      "english": "Start with the basics of Python: variables, loops, and functions. Practice by writing small programs every day. Then build simple projects, such as a calculator or a to-do list.",
+      "dzongkha": null,
+      "status": "unreviewed"
+    },
+    {
+      "id": "what_is_python",
+      "keywords": ["what is python", "what's python", "explain python"],
+      "english": "Python is a popular programming language that is easy to read and learn. It is used for websites, data analysis, and artificial intelligence.",
+      "dzongkha": null,
+      "status": "unreviewed"
+    },
+    {
+      "id": "what_is_dzongkha",
+      "keywords": ["what is dzongkha", "what language is dzongkha", "tell me about dzongkha"],
+      "english": "Dzongkha is the national language of Bhutan. It is written in a script that comes from the Tibetan script.",
+      "dzongkha": null,
+      "status": "unreviewed"
+    }
+  ]
+}
